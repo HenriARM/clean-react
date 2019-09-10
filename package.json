@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "format": "npx prettier --write \"src/**/*.js\" & npx prettier --write \"src/**/*.jsx\" "
+    "prformat": "npx prettier --write \"src/**/*.js\" & npx prettier --write \"src/**/*.jsx\" "
   },
   "keywords": [],
   "author": "",
@@ -15,8 +15,13 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "eslint": "^6.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-react": "^7.14.3",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",

@@ -8,9 +8,8 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader"
-                }
+                use: ['babel-loader']
+                // use: ['babel-loader', 'eslint-loader']
             },
             {
                 test: /\.css$/,
@@ -40,7 +39,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['*','.js', '.jsx'],
+        extensions: ['*', '.js', '.jsx'],
     },
     output: {
         path: path.resolve(__dirname, "dist/"),
