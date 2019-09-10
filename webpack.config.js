@@ -1,6 +1,7 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const path = require("path");
 const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
+const path = require("path");
 
 module.exports = {
     module: {
@@ -53,11 +54,14 @@ module.exports = {
         hotOnly: true
     },
     plugins: [
-        // will generate html file inside dist folder including bundle with <src>
+        // will generate html file inside dist folder including bundle with <src> tag
         new HtmlWebPackPlugin({
             template: "./public/index.html",
             filename: "./index.html"
-        })
+        }),
+        new CopyPlugin([
+            { from: 'src/assets', to: 'assets' }
+        ])
     ]
 };
 

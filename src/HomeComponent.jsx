@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import svgFile from './browser.svg';
-import pngFile from './pencil.png';
-
-// const svgFile = require('./browser.svg');
 
 class HomeComponent extends Component {
     render () {
         return (
             <div>
                 <p>Hello world!</p>
-                <img src={pngFile} alt="nothing" />
-                <img src={svgFile} alt="nothing" />
+                <img src="assets/pencil.png" alt="nothing" />
+                <img src="assets/browser.svg" alt="nothing" />
             </div>
         );
     }
